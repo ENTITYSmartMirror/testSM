@@ -9,13 +9,14 @@
  */
 
 var config = {
-	address: "localhost", // Address to listen on, can be:
+	address: "192.168.0.25", // Address to listen on, can be:
 	                      // - "localhost", "127.0.0.1", "::1" to listen on loopback interface
 	                      // - another specific IPv4/6 to listen on a specific interface
 	                      // - "", "0.0.0.0", "::" to listen on any interface
 	                      // Default, when address config is left out, is "localhost"
 	port: 8080,
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
+	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1","192.168.0.26", "::ffff:192.168.0.26", "::1","192.168.0.25", "::ffff:192.168.0.25", "::1"],
+															// Set [] to allow all IP addresses
 	                                                       // or add a specific IPv4 of 192.168.1.5 :
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
 	                                                       // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
@@ -26,6 +27,28 @@ var config = {
 	units: "metric",
 
 	modules: [
+		{
+			module: 'MMM-iFrame',
+			position: 'bottom_bar',	// This can be any of the regions.
+			config: {
+				// See 'Configuration options' for more information.
+					url: ["https://comic.naver.com/webtoon/list.nhn?titleId=641253"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					width: "1680", // width of iframe
+					height: "1050", // height of iframe
+					frameWidth: "1200" // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
+				}
+			
+		},
+		{
+			module: "MMM-ImagesPhotos",
+			position: "middle_center",
+			config: {
+				opacity: 0.9,
+				animationSpeed: 500,
+				updateInterval: 5000,
+			}
+		},
 		{
 			module: "alert",
 		},
