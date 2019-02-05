@@ -253,7 +253,7 @@ var MM = (function() {
 
 	/* showModule(module, speed, callback)
 	 * Show the module.
-	 *
+	 *==
 	 * argument module Module - The module to show.
 	 * argument speed Number - The speed of the show animation.
 	 * argument callback function - Called when the animation is done.
