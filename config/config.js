@@ -29,82 +29,11 @@ var config = {
 	modules: [
 		
 		{
-			module: "test1",
+			module: "MMM-Test",
 			position: "top_left",
-			
-		},
-		/*
-		{
-			module: "MMM-ImagesPhotos",
-			position: "middle_center",
-			config: {
-				opacity: 0.9,
-				animationSpeed: 500,
-				updateInterval: 5000,
-			}
-		},
-		*/
-		{
-			module: "alert",
-		},
-		{
-			module: "updatenotification",
-			position: "top_bar"
-		},
-		{
-			module: "clock",
-			position: "top_left"
-		},
-		{
-			module: "calendar",
-			header: "US Holidays",
-			position: "top_left",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check-o ",
-						url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
-					}
-				]
-			}
-		},
-		{
-			module: "compliments",
-			position: "lower_third"
-		},
-		{
-			module: "currentweather",
-			position: "top_right",
-			config: {
-				location: "New York",
-				locationID: "",  //ID from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "weatherforecast",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				location: "New York",
-				locationID: "5128581",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "newsfeed",
-			position: "bottom_bar",
-			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true
-			}
-		},
+			config: {}
+		   },
+		
 	]
 
 };
